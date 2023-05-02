@@ -45,6 +45,9 @@ func home(w http.ResponseWriter, r *http.Request) {
 func ourHandler(w http.ResponseWriter, r *http.Request) {
 	log.Println("Executing he handler")
 	w.Write([]byte("Carrots \n"))
+	if r.URL.Path == "/cherry" {
+		return
+	}
 }
 
 func main() {
